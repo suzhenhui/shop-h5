@@ -358,3 +358,28 @@ a {
 .index_pro_wrapper li{
     padding-bottom: .1rem;
 }
+.index_pro_list .pro_item{
+    background: #fff;
+    overflow-x: auto; 
+    overflow-y: hidden;
+}
+.index_pro_list .pro_item ul{
+    height: 1.7rem;
+}
+.index_pro_list .pro_item li{
+    width: 1rem;
+    float: left;
+    margin-left: .1rem;
+}
+.index_pro_list .pro_item li p.name{
+    margin-top: 0.03rem;
+    font-size: 0.12rem;
+}
+.index_pro_list .pro_item li p.price{
+    font: 400 .1rem/.16rem "Microsoft YaHei";
+    margin-top: 0.07rem;
+    color: #ff9600;
+}
+.index_pro_list .pro_item li p.price span{
+    font-size: .14rem;
+}
