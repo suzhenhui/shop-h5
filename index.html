@@ -92,8 +92,8 @@
                                 </dt>
                                 <dd>
                                     <div class="pro_item">
-                                        <ul>
-                                            <li>
+                                        <ul :style="proItemUlWidth">
+                                            <li ref="proItem">
                                                 <a href="">
                                                     <p class="pic">
                                                         <img src="images/index_pro1.jpg" alt="">
@@ -102,7 +102,7 @@
                                                     <p class="price">￥<span>26</span>.00</p>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li ref="proItem">
                                                 <a href="">
                                                     <p class="pic">
                                                         <img src="images/index_pro2.jpg" alt="">
@@ -153,6 +153,103 @@
                             </dl>
                         </div>
                     </li>
+                    <li>
+                        <div class="index_pro_list">
+                            <dl>
+                                <dt>
+                                    <a href="">
+                                        <img src="images/pro_b2.jpg" alt="">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <div class="pro_item">
+                                        <ul :style="proItemUlWidth">
+                                            <li ref="proItem">
+                                                <a href="">
+                                                    <p class="pic">
+                                                        <img src="images/index_pro1.jpg" alt="">
+                                                    </p>
+                                                    <p class="name">澳洲进口橙4个装（750g以上）</p>
+                                                    <p class="price">￥<span>26</span>.00</p>
+                                                </a>
+                                            </li>
+                                            <li ref="proItem">
+                                                <a href="">
+                                                    <p class="pic">
+                                                        <img src="images/index_pro2.jpg" alt="">
+                                                    </p>
+                                                    <p class="name">澳洲进口橙4个装（750g以上）</p>
+                                                    <p class="price">￥<span>26</span>.00</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <p class="pic">
+                                                        <img src="images/index_pro1.jpg" alt="">
+                                                    </p>
+                                                    <p class="name">澳洲进口橙4个装（750g以上）</p>
+                                                    <p class="price">￥<span>26</span>.00</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <p class="pic">
+                                                        <img src="images/index_pro2.jpg" alt="">
+                                                    </p>
+                                                    <p class="name">澳洲进口橙4个装（750g以上）</p>
+                                                    <p class="price">￥<span>26</span>.00</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <p class="pic">
+                                                        <img src="images/index_pro1.jpg" alt="">
+                                                    </p>
+                                                    <p class="name">澳洲进口橙4个装（750g以上）</p>
+                                                    <p class="price">￥<span>26</span>.00</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <p class="pic">
+                                                        <img src="images/index_pro2.jpg" alt="">
+                                                    </p>
+                                                    <p class="name">澳洲进口橙4个装（750g以上）</p>
+                                                    <p class="price">￥<span>26</span>.00</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="index_media_list">
+                            <dl>
+                                <dt>
+                                    <img src="images/tt.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <div class="media_item">
+                                        <div class="img">
+                                            <img src="images/pro.jpg" alt="">
+                                        </div>
+                                        <div class="about">
+                                            <p>台湾葡萄柚2个装（600-700g)</p>
+                                            <p>直降26.0元</p>
+                                            <p>换购</p>
+                                            <p class="price">
+                                                ￥<span>32</span>.00
+                                                <font>58.00</font>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -160,7 +257,20 @@
 </body>
 <script>
     new Vue({
-        el:'#app'
+        el:'#app',
+        data(){
+            return{
+                proItemUlWidth:{width:0}
+            }
+        },
+        mounted() {
+            this.getWidth()  
+        },
+        methods:{
+            getWidth(){
+                this.proItemUlWidth.width = this.$refs.proItem.offsetWidth * 6+'px';
+            }
+        }
     })
 </script>
 </html>

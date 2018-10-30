@@ -365,11 +365,14 @@ a {
 }
 .index_pro_list .pro_item ul{
     height: 1.7rem;
+    padding-left: .1rem;
 }
 .index_pro_list .pro_item li{
     width: 1rem;
     float: left;
-    margin-left: .1rem;
+}
+.index_pro_list .pro_item li+li{
+    padding-left: .1rem;
 }
 .index_pro_list .pro_item li p.name{
     margin-top: 0.03rem;
@@ -382,4 +385,8 @@ a {
 }
 .index_pro_list .pro_item li p.price span{
     font-size: .14rem;
+}
+
+.index_media_list .media_item{
+    display: flex;
 }
